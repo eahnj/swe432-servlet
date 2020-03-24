@@ -12,6 +12,9 @@ import java.util.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
 
+//Import for Hiroku
+import javax.servlet.annotation.WebServlet;
+
 // twoButtons class
 // CONSTRUCTOR: no constructor specified (default)
 //
@@ -26,6 +29,8 @@ import javax.servlet.http.*;
 //              Fields are filled from the parameters.
 // private void PrintTail (PrintWriter out) --> Prints the HTML bottom
 //***********************************************************************
+
+@WebServlet( name = "twobutton", urlPatterns = {"/twobutton"} )
 
 public class twoButtons extends HttpServlet
 {
