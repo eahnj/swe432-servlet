@@ -6,6 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
   <script>
     var servletURL = window.location.origin + "/hello";
+    var servletURL2 = window.location.origin + "/twobutton";
   </script>
 <title>First JSP</title>
 </head>
@@ -14,6 +15,7 @@
 <h2>Hello Heroku! I am JSP</h2>
 <strong>Current Time is</strong>: <%=new Date() %>
 <button onclick="window.location.assign(servletURL);"> Try the servlet </button>
-
+<button onclick="window.location.assign(servletURL2);"> Try the next servlet </button>
+    
 </body>
 </html>
