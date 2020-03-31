@@ -1,7 +1,7 @@
 /** *****************************************************************
     assign6.java   servlet example
 
-        @author Jeff Offutt
+        @author Edwin & Abhilaash
 ********************************************************************* */
 
 // Import Java Libraries
@@ -12,7 +12,10 @@ import java.util.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
 
-// twoButtons class
+//Import for Hiroku
+import javax.servlet.annotation.WebServlet;
+
+// assign6 class
 // CONSTRUCTOR: no constructor specified (default)
 //
 // ***************  PUBLIC OPERATIONS  **********************************
@@ -26,6 +29,8 @@ import javax.servlet.http.*;
 //              Fields are filled from the parameters.
 // private void PrintTail (PrintWriter out) --> Prints the HTML bottom
 //***********************************************************************
+
+@WebServlet( name = "assign6", urlPatterns = {"/assign6"} )
 
 public class assign6 extends HttpServlet
 {
