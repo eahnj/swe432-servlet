@@ -30,7 +30,7 @@ import javax.servlet.annotation.WebServlet;
 // private void PrintTail (PrintWriter out) --> Prints the HTML bottom
 //***********************************************************************
 
-@WebServlet( name = "twobutton", urlPatterns = {"/twobutton"} )
+@WebServlet( name = "twoButtons", urlPatterns = {"/twoButtons"} )
 
 public class twoButtons extends HttpServlet
 {
