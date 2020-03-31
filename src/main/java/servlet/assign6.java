@@ -97,7 +97,7 @@ public void doGet (HttpServletRequest request, HttpServletResponse response)
 {
    response.setContentType("text/html");
    PrintWriter out = response.getWriter();
-   PrintHead(out);
+   PrintHtml(out);
    //PrintBody(out);
 //    PrintTail(out);
 } // End doGet
@@ -216,19 +216,19 @@ private void PrintHtml (PrintWriter out)
  *  Prints the <BODY> of the HTML page with the form data
  *  values from the parameters.
 ********************************************************* */
-private void PrintBody (PrintWriter out)
-{
-
-} // End PrintBody
+//private void PrintBody (PrintWriter out)
+//{
+//
+//} // End PrintBody
 
 /** *****************************************************
  *  Overloads PrintBody (out,lhs,rhs,rslt) to print a page
  *  with blanks in the form fields.
 ********************************************************* */
-private void PrintBody (PrintWriter out)
-{
-   PrintBody(out, "", "", "");
-}
+//private void PrintBody (PrintWriter out)
+//{
+//   PrintBody(out, "", "", "");
+//}
 
 /** *****************************************************
  *  Prints the bottom of the HTML page.
