@@ -158,8 +158,8 @@ private void PrintHtml (PrintWriter out)
    
    out.println("<body>");
    out.println("<br>");
-   out.println("Collaboration Summary: It has a few forms and two javascripts functions");
-   out.println("that access the BOM. Abhilaash worked on the BOM while Edwin worked on the forms.");
+   out.println("Collaboration Summary: Edwin worked on the GET method and Abhilaash worked on the POST method");
+   out.println("and assisted with the GET method. Both members were actively testing and deploying on Heroku to fix issues that arose.");
    out.println("<br>");
    out.println("<input type=\"button\" value=\"Back\" onclick=\"goBack()\">");
    out.println("<p id=\"pageLocation\"></p>");
