@@ -198,9 +198,9 @@ private void PrintHtml (PrintWriter out)
    out.println("<br>");
    out.println("");
    out.println("<input type=\"radio\" id=\"fiveMinutesBlaze\" name=\"serviceSpeedBlaze\" value=\"fiveMinutesBlaze\">");
-   out.println("<label for=\"fiveMinutesManhattan\">05 minutes or less</label><br>");
+   out.println("<label for=\"fiveMinutesBlaze\">05 minutes or less</label><br>");
    out.println("<input type=\"radio\" id=\"tenMinutesBlaze\" name=\"serviceSpeedBlaze\" value=\"tenMinutesBlaze\">");
-   out.println("<label for=\"tenMinutesManhattan\">10 minutes</label><br>");
+   out.println("<label for=\"tenMinutesBlaze\">10 minutes</label><br>");
    out.println("<input type=\"radio\" id=\"fifteenMinutesBlaze\" name=\"serviceSpeedBlaze\" value=\"fifteenMinutesBlaze\">");
    out.println("<label for=\"fifteenMinutesBlaze\">15 minutes</label><br>");
    out.println("<input type=\"radio\" id=\"thirtyMinutesBlaze\" name=\"serviceSpeedBlaze\" value=\"thirtyMinutesBlaze\">");
