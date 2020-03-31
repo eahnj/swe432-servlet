@@ -36,8 +36,8 @@ public class assign6 extends HttpServlet
 {
 
 // Location of servlet.
-static String Domain  = "cs.gmu.edu:8443";
-static String Path    = "/offutt/servlet/";
+static String Domain  = "swe432-servlet.herokuapp.com/";
+static String Path    = "/";
 static String Servlet = "assign6";
 
 // Button labels
