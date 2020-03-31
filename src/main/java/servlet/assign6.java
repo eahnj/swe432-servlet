@@ -83,9 +83,9 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
 
    response.setContentType("text/html");
    PrintWriter out = response.getWriter();
-   PrintHead(out);
-   PrintBody(out, lhsStr, rhsStr, rslt.toString());
-   PrintTail(out);
+   PrintHtml(out);
+//    PrintBody(out);
+//    PrintTail(out);
 }  // End doPost
 
 /** *****************************************************
@@ -99,13 +99,13 @@ public void doGet (HttpServletRequest request, HttpServletResponse response)
    PrintWriter out = response.getWriter();
    PrintHead(out);
    //PrintBody(out);
-   PrintTail(out);
+//    PrintTail(out);
 } // End doGet
 
 /** *****************************************************
- *  Prints the <head> of the HTML page, no <body>.
+ *  Prints the entire HTML page.
 ********************************************************* */
-private void PrintHead (PrintWriter out)
+private void PrintHtml (PrintWriter out)
 {
    out.println("<html>");
    out.println("");
@@ -134,18 +134,10 @@ private void PrintHead (PrintWriter out)
    out.println("}");
    out.println("</style>");
    
-} // End PrintHead
-
-/** *****************************************************
- *  Prints the <BODY> of the HTML page with the form data
- *  values from the parameters.
-********************************************************* */
-private void PrintBody (PrintWriter out, String lhs, String rhs, String rslt)
-{
    out.println("<body>");
    out.println("<br>");
    out.println("Collaboration Summary: It has a few forms and two javascripts functions");
-    out.println("that access the BOM. Abhilaash worked on the BOM while Edwin worked on the forms.");
+   out.println("that access the BOM. Abhilaash worked on the BOM while Edwin worked on the forms.");
    out.println("<br>");
    out.println("<input type=\"button\" value=\"Back\" onclick=\"goBack()\">");
    out.println("<p id=\"pageLocation\"></p>");
@@ -218,6 +210,15 @@ private void PrintBody (PrintWriter out, String lhs, String rhs, String rslt)
    out.println("}");
    out.println("</script>");
    out.println("</body>");
+} // End PrintHead
+
+/** *****************************************************
+ *  Prints the <BODY> of the HTML page with the form data
+ *  values from the parameters.
+********************************************************* */
+private void PrintBody (PrintWriter out)
+{
+
 } // End PrintBody
 
 /** *****************************************************
