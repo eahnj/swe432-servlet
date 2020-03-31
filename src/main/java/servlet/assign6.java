@@ -14,20 +14,6 @@ import javax.servlet.http.*;
 //Import for Hiroku
 import javax.servlet.annotation.WebServlet;
 
-// assign6 class
-// CONSTRUCTOR: no constructor specified (default)
-//
-// ***************  PUBLIC OPERATIONS  **********************************
-// public void doPost ()  --> prints a blank HTML page
-// public void doGet ()  --> prints a blank HTML page
-// private void PrintHead (PrintWriter out) --> Prints the HTML head section
-// private void PrintBody (PrintWriter out) --> Prints the HTML body with
-//              the form. Fields are blank.
-// private void PrintBody (PrintWriter out, String lhs, String rhs, String rslt)
-//              Prints the HTML body with the form.
-//              Fields are filled from the parameters.
-// private void PrintTail (PrintWriter out) --> Prints the HTML bottom
-//***********************************************************************
 
 @WebServlet( name = "assign6", urlPatterns = {"/assign6"} )
 
