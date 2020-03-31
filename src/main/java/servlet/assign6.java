@@ -164,7 +164,7 @@ private void PrintHtml (PrintWriter out)
    out.println("<input type=\"button\" value=\"Back\" onclick=\"goBack()\">");
    out.println("<p id=\"pageLocation\"></p>");
    out.println("<br>");
-   out.println("Please fill out the following survey to the best of your ability and answer all of the questions.");
+   out.println("Please fill out the following survey to the best of your ability and answer all of the questions. Clicking submit will show you your responses in a form handler.");
    out.println("<br>");
    out.println("");
    out.println("Best pizza on campus");
