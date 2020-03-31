@@ -62,12 +62,12 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
 
    toClient.println("<html>");
    toClient.println("<head>");
-   toClient.println("  <title>Generic form handler</title>");
+   toClient.println("  <title>Generic Form Handler</title>");
    toClient.println("</head>");
 
    toClient.println("<body bgcolor=\"#EEEEEE\">");
    toClient.println("");
-   toClient.println("<center><h2>Generic form handler in assign6 file</h2></center>");
+   toClient.println("<center><h2>Generic form handler</h2></center>");
    toClient.println("<p>");
    toClient.println("The following table lists all parameter names and");
    toClient.println("their values that were submitted from your form.");
