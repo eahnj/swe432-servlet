@@ -45,7 +45,7 @@ static String OperationSub = "Subtract";
 static String OperationMult = "Multiply";
 
 // Other strings.
-static String Style ="https://www.cs.gmu.edu/~offutt/classes/432/432-style.css";
+//static String Style ="https://www.cs.gmu.edu/~offutt/classes/432/432-style.css";
 
 /** *****************************************************
  *  Overrides HttpServlet's doPost().
@@ -71,7 +71,7 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
 
    toClient.println("<body bgcolor=\"#EEEEEE\">");
    toClient.println("");
-   toClient.println("<center><h2>Generic form handler</h2></center>");
+   toClient.println("<center><h2>Generic form handler in assign6 file</h2></center>");
    toClient.println("<p>");
    toClient.println("The following table lists all parameter names and");
    toClient.println("their values that were submitted from your form.");
