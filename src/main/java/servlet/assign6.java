@@ -39,17 +39,13 @@ static String Domain  = "swe432-servlet.herokuapp.com";
 static String Path    = "/";
 static String Servlet = "assign6";
 
-// Button labels
-static String OperationAdd = "Add";
-static String OperationSub = "Subtract";
-static String OperationMult = "Multiply";
 
 // Other strings.
 static String Style ="https://www.cs.gmu.edu/~offutt/classes/432/432-style.css";
 
 /** *****************************************************
  *  Overrides HttpServlet's doPost().
- *  Converts the values in the form, performs the operation
+ *  Converts the values in the form, performs the actions
  *  indicated by the submit button, and sends the results
  *  back to the client.
 ********************************************************* */
@@ -188,7 +184,7 @@ private void PrintHtml (PrintWriter out)
    out.println("Best pizza on campus");
    out.println("<br>");
    out.println("");
-   out.println("<form method=\"post\" action=\"https://cs.gmu.edu:8443/offutt/servlet/formHandler\">");
+   out.println("<form method=\"post\" action=\"https://swe432-servlet.herokuapp.com/assign6\">");
    out.println("<input type=\"radio\" id=\"manhattan\" name=\"bestPizza\" value=\"manhattan\">");
    out.println("<label for=\"manhattan\">Manhattan Pizza</label><br>");
    out.println("<input type=\"radio\" id=\"blaze\" name=\"bestPizza\" value=\"blaze\">");
