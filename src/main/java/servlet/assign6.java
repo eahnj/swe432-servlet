@@ -94,7 +94,7 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
       }
    }
    toClient.println("</table>");
-   toClient.println("");
+   toClient.println("</p>");
    toClient.println("</body>");
    toClient.println("</html>");
 
@@ -137,7 +137,7 @@ private void PrintHtml (PrintWriter out)
    //out.println(" <link rel=\"stylesheet\" type=\"text/css\" href=\"" + Style + "\">");
    out.println("</head>");
    out.println("");
-   
+
    out.println("<style>");
    out.println("body {");
    out.println("background: #d3d3d3");
@@ -155,16 +155,16 @@ private void PrintHtml (PrintWriter out)
    out.println("text-align: center");
    out.println("}");
    out.println("</style>");
-   
+
    out.println("<body>");
    out.println("<br>");
-   out.println("Collaboration Summary: Edwin worked on the GET method and Abhilaash worked on the POST method");
-   out.println("and assisted with the GET method. Both members were actively testing and deploying on Heroku to fix issues that arose.");
+   out.println("<p>Collaboration Summary: Edwin worked on the GET method and Abhilaash worked on the POST method");
+   out.println("and assisted with the GET method. Both members were actively testing and deploying on Heroku to fix issues that arose.</p>");
    out.println("<br>");
    out.println("<input type=\"button\" value=\"Back\" onclick=\"goBack()\">");
    out.println("<p id=\"pageLocation\"></p>");
    out.println("<br>");
-   out.println("Please fill out the following survey to the best of your ability and answer all of the questions. Clicking submit will show you your responses in a form handler.");
+   out.println("<p>Please fill out the following survey to the best of your ability and answer all of the questions. Clicking submit will show you your responses in a form handler.</p>");
    out.println("<br>");
    out.println("");
    out.println("Best pizza on campus");
