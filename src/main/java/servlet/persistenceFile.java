@@ -46,7 +46,7 @@ public class persistenceFile extends HttpServlet{
   {
      String name = request.getParameter(Data.NAME.name());
      String age = request.getParameter(Data.AGE.name());
-     String height = request.getParameter(Data.HEIGHT.name()); //added for exercise
+     String sex = request.getParameter(Data.SEX.name()); //added for exercise
 
      String error = "";
      if(name == null){
@@ -76,27 +76,9 @@ public class persistenceFile extends HttpServlet{
      }
      
      //added in for exercise
-     if(height == null){
-         error += "<li>Height is required.<li>";
-         height = "";
-     }
-     else{
-         try{
-            Double heightDouble = new Double(height);
-            if(heightDouble<0.0){
-               error += "<li>Height must be a decimal value greater than 0.</li>";
-               height = "";
-            }
-            else{
-               if(heightDouble){
-                  error+= "<li>Age must be an integer less than 150.</li>";
-                  age = "";
-               }
-            }
-         }
-     }catch (Exception e){
-         error += "<li> Height must be an integer greater than 0.</li>";
-         height = "";
+     if(sex == null){
+         error += "<li>Sex is required.<li>";
+         sex = "";
      }
      //~~~~~~
 
@@ -105,7 +87,7 @@ public class persistenceFile extends HttpServlet{
 
      if (error.length() == 0){
        PrintWriter entriesPrintWriter = new PrintWriter(new FileWriter(RESOURCE_FILE, true), true);
-       entriesPrintWriter.println(name+VALUE_SEPARATOR+age+VALUE_SEPARATOR+height);
+       entriesPrintWriter.println(name+VALUE_SEPARATOR+age+VALUE_SEPARATOR+sex);
        entriesPrintWriter.close();
 
        PrintHead(out);
@@ -113,7 +95,7 @@ public class persistenceFile extends HttpServlet{
        PrintTail(out);
      }else{
        PrintHead(out);
-       PrintBody(out, name, age, height, error);
+       PrintBody(out, name, age, sex, error);
        PrintTail(out);
      }
   }
@@ -184,9 +166,8 @@ public class persistenceFile extends HttpServlet{
      
      out.println("  <tr>"); //added in for exercise
      out.println("   <td>Height (nearest foot):</td>");
-     out.println("   <td><input type=\"text\" name=\""+Data.HEIGHT.name()
-      +"\" oninput=\"this.value=this.value.replace(/[^0-9]/g,'');\" value=\""
-      +height+"\" size=3 required></td>");
+     out.println("   <td><input type=\"text\" name=\""+Data.SEX.name()
+      +"\" value=\""+sex+"\" size=30 required></td>");
      out.println("  </tr>"); //~~~~~
      
      out.println(" </table>");
@@ -215,7 +196,7 @@ public class persistenceFile extends HttpServlet{
         out.println("  <tr>");
         out.println("   <th>Name</th>");
         out.println("   <th>Age</th>");
-        out.println("   <th>Height</th>"); //added in for exercise
+        out.println("   <th>Sex</th>"); //added in for exercise
         out.println("  </tr>");
         File file = new File(resourcePath);
         if(!file.exists()){
