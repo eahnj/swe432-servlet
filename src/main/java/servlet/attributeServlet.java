@@ -27,7 +27,7 @@ public void doGet (HttpServletRequest request, HttpServletResponse response)
    String remove = request.getParameter("attrib_remove");
    String action = request.getParameter("action");
    if (action != null && action.equals("invalidate"))
-      {  
+      {
          session.invalidate();
 
          response.setContentType("text/html");
@@ -95,7 +95,8 @@ public void doGet (HttpServletRequest request, HttpServletResponse response)
    out.println(" <input type=\"submit\" name=\"update\" value=\"Update\">");
    out.println("</form>");
    String lifeCycleURL = "attributeServlet";
-   out.print  ("<br><br><a href=\"" + lifeCycleURL + "?action=invalidate\">");
+   out.println("<br><br><a href=\"" + lifeCycleURL + "?action=invalidate\">");
+   out.println("Invalidate the session</a>");
    out.println("<hr>");
 
    out.println("Attributes in this session:");
