@@ -94,8 +94,8 @@ public void doGet (HttpServletRequest request, HttpServletResponse response)
 
    out.println(" <br><input type=\"checkbox\" name=\"attrib_remove\">Remove");
    out.println(" <input type=\"submit\" name=\"update\" value=\"Update\">");
+   out.println(" <input type=\"button\" name=\"Invalidate the Session\" value=\"invalidate\">");
    out.println("</form>");
-   out.println(" <input type=\"button\" name=\"Invalidate the Session\" value=\"invalidate\" onclick=\"invalidateSession\">");
    out.println("<hr>");
 
    out.println("Attributes in this session:");
