@@ -28,15 +28,15 @@ public class echo extends HttpServlet{
 
      PrintWriter out = res.getWriter();
 
-     /*
+     
      Map<String, String[]> parameterMap = req.getParameterMap();
      Map<String, String> data = new HashMap<String, String>();
      for (String key: parameterMap.keySet()) {
          String parameter = parameterMap.get(key)[0];
          data.put(key, parameter);
      }
-     */
      
+     /*
      String bestpizza = req.getParameter("bestPizza");
      String servicespeedm = req.getParameter("serviceSpeedManhattan");
      String servicespeedb = req.getParameter("serviceSpeedBlaze");
@@ -50,8 +50,10 @@ public class echo extends HttpServlet{
      out.println(servicespeedb);
      out.println("Best Location");
      out.println(bestloc);
-     //out.print(new Gson().toJson(data));
-     //out.flush();
+     */
+     
+     out.print(new Gson().toJson(data));
+     out.flush();
      out.close();
     }
 }
