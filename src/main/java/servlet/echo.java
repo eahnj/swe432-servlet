@@ -28,20 +28,35 @@ public class echo extends HttpServlet{
 
      PrintWriter out = res.getWriter();
 
-     
+     /*
      Map<String, String[]> parameterMap = req.getParameterMap();
      Map<String, String> data = new HashMap<String, String>();
      for (String key: parameterMap.keySet()) {
          String parameter = parameterMap.get(key)[0];
          data.put(key, parameter);
      }
+     */
+     
+     String bestpizza = req.getParameter("bestPizza");
+     String[] bpresult = req.getParameterValues("bestPizza");
+     
+     String servicespeedm = req.getParameter("serviceSpeedManhattan");
+     String[] ssmresult = req.getParameterValues("serviceSpeedManhattan");
+     
+     String servicespeedb = req.getParameter("serviceSpeedBlaze");
+     String[] ssbresult = req.getParameterValues("serviceSpeedBlaze");
+     
+     String bestloc = req.getParameter("bestLocation");
+     String[] blresult = req.getParameterValues("bestLocation");
+     
+     Map<String, String> data = new HashMap<String, String>();
+     
+     data.put(bestpizza, bpresult[0]);
+     data.put(servicespeedm, ssmresult[0]);
+     data.put(servicespeedb, ssbresult[0]);
+     data.put(bestloc, blresult[0]);
      
      /*
-     String bestpizza = req.getParameter("bestPizza");
-     String servicespeedm = req.getParameter("serviceSpeedManhattan");
-     String servicespeedb = req.getParameter("serviceSpeedBlaze");
-     String bestloc = req.getParameter("bestLocation");
-     
      out.println("Best pizza");
      out.println(bestpizza);
      out.println("Service Speed Manhattan");
