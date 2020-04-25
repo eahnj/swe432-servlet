@@ -1,6 +1,7 @@
 package servlet;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;//added for formatting
 
 import java.io.PrintWriter;
 import java.io.IOException;
@@ -28,7 +29,7 @@ public class echo extends HttpServlet{
 
      PrintWriter out = res.getWriter();
 
-
+     /*
      String bestpizza = req.getParameter("bestPizza");
      String[] bpresult = req.getParameterValues("bestPizza");
 
@@ -40,6 +41,7 @@ public class echo extends HttpServlet{
 
      String bestloc = req.getParameter("bestLocation");
      String[] blresult = req.getParameterValues("bestLocation");
+     */
 
      Map<String, String> data = new HashMap<String, String>();
 
@@ -65,7 +67,10 @@ public class echo extends HttpServlet{
      out.println(bestloc);
      */
 
-     out.print(new Gson().toJson(data));
+     Gson gson = new GsonBuilder().setPrettyPrinting().create();//makes the format better?
+
+     //out.print(new Gson().toJson(data));
+     out.print(gson().toJson(data))
      out.flush();
      out.close();
     }
