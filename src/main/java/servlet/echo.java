@@ -1,7 +1,8 @@
 package servlet;
 
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;//added for formatting
+//import com.google.gson.GsonBuilder;//added for formatting
+import java.io.*;//added for lowercase
 
 import java.io.PrintWriter;
 import java.io.IOException;
@@ -45,11 +46,21 @@ public class echo extends HttpServlet{
 
      Map<String, String> data = new HashMap<String, String>();
 
-      Map<String, String[]> parameterMap = req.getParameterMap();
-      for (String key: parameterMap.keySet()) {
-          String parameter = parameterMap.get(key)[0];
-          data.put(key, parameter);
-      }
+     Map<String, String[]> parameterMap = req.getParameterMap();
+     for (String key: parameterMap.keySet()) {
+         if(key.equals("bestLocation")){ //input validation
+            String parameter = parameterMap.get(key)[0].toLowerCase();
+            if(parameter.length() > 30){parameter = "Cannot have more than 30 characters!";}
+            else if(parameter.contains("fuck") || parameter.contains("shit") || parameter.contains("hell") || parameter.contains("damn")){
+               parameter = "Cannot have bad words!";
+            }
+            else if(parameter.contains("gmu")){parameter = "G M U WHAAAAT!";}
+         }
+         else{
+            String parameter = parameterMap.get(key)[0];
+         }
+         data.put(key, parameter);
+     }
 
      // data.put(bestpizza, bpresult[0]);
      // data.put(servicespeedm, ssmresult[0]);
@@ -67,10 +78,10 @@ public class echo extends HttpServlet{
      out.println(bestloc);
      */
 
-     Gson gson = new GsonBuilder().setPrettyPrinting().create();//makes the format better?
+     //Gson gson = new GsonBuilder().setPrettyPrinting().create();//makes the format better?
 
-     //out.print(new Gson().toJson(data));
-     out.print(gson.toJson(data));
+     out.print(new Gson().toJson(data));
+     //out.print(gson.toJson(data));
      out.flush();
      out.close();
     }
