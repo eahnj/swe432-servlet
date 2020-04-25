@@ -55,11 +55,13 @@ public class echo extends HttpServlet{
                parameter = "Cannot have bad words!";
             }
             else if(parameter.contains("gmu")){parameter = "G M U WHAAAAT!";}
+            data.put(key, parameter);
          }
          else{
             String parameter = parameterMap.get(key)[0];
+            data.put(key, parameter);
          }
-         data.put(key, parameter);
+         //data.put(key, parameter);
      }
 
      // data.put(bestpizza, bpresult[0]);
