@@ -44,7 +44,6 @@ public class echo extends HttpServlet{
      Map<String, String> data = new HashMap<String, String>();
 
       Map<String, String[]> parameterMap = req.getParameterMap();
-      Map<String, String> data = new HashMap<String, String>();
       for (String key: parameterMap.keySet()) {
           String parameter = parameterMap.get(key)[0];
           data.put(key, parameter);
