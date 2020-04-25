@@ -70,7 +70,7 @@ public class echo extends HttpServlet{
      Gson gson = new GsonBuilder().setPrettyPrinting().create();//makes the format better?
 
      //out.print(new Gson().toJson(data));
-     out.print(gson().toJson(data))
+     out.print(gson().toJson(data));
      out.flush();
      out.close();
     }
