@@ -10,6 +10,7 @@
     var servletURL3 = window.location.origin + "/assign6";
     var servletURL4 = window.location.origin + "/file";
     var servletURL5 = window.location.origin + "/attributeServlet";
+    var servletURL6 = window.location.origin + "/echo";
   </script>
 <title>First JSP</title>
 </head>
@@ -22,6 +23,7 @@
 <button onclick="window.location.assign(servletURL3);"> Try the assign6 servlet </button>
 <button onclick="window.location.assign(servletURL4);"> Try the in-class exercise (4/14) persistence file servlet </button>
 <button onclick="window.location.assign(servletURL5);"> Try the attribute servlet </button>
+<button onclick="window.location.assign(servletURL6);"> Try the echo page </button>
     
 </body>
 </html>
