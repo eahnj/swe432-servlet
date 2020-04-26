@@ -46,7 +46,7 @@ public class echo extends HttpServlet{
          }
          else{
             String parameter = parameterMap.get(key)[0];
-            if(parameter == null){parameter = "Please Select an option!"}
+            if(parameter == null){parameter = "Please Select an option!";}
             data.put(key, parameter);
          }
          //data.put(key, parameter);
