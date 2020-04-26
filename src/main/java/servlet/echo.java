@@ -30,60 +30,30 @@ public class echo extends HttpServlet{
 
      PrintWriter out = res.getWriter();
 
-     /*
-     String bestpizza = req.getParameter("bestPizza");
-     String[] bpresult = req.getParameterValues("bestPizza");
-
-     String servicespeedm = req.getParameter("serviceSpeedManhattan");
-     String[] ssmresult = req.getParameterValues("serviceSpeedManhattan");
-
-     String servicespeedb = req.getParameter("serviceSpeedBlaze");
-     String[] ssbresult = req.getParameterValues("serviceSpeedBlaze");
-
-     String bestloc = req.getParameter("bestLocation");
-     String[] blresult = req.getParameterValues("bestLocation");
-     */
-
      Map<String, String> data = new HashMap<String, String>();
 
      Map<String, String[]> parameterMap = req.getParameterMap();
      for (String key: parameterMap.keySet()) {
+         
          if(key.equals("bestLocation")){ //input validation
             String parameter = parameterMap.get(key)[0].toLowerCase();
             if(parameter.length() > 30){parameter = "Cannot have more than 30 characters!";}
             else if(parameter.contains("fuck") || parameter.contains("shit") || parameter.contains("hell") || parameter.contains("damn")){
                parameter = "Cannot have bad words!";
             }
-            else if(parameter.contains("gmu")){parameter = "G M U WHAAAAT!";}
+            else if(parameter.contains("gmu")){parameter = "G M U WHAAAAT!";}//fun secret phrase trigger!
             data.put(key, parameter);
          }
          else{
             String parameter = parameterMap.get(key)[0];
+            if(parameter == null){parameter = "Please Select an option!"}
             data.put(key, parameter);
          }
          //data.put(key, parameter);
      }
 
-     // data.put(bestpizza, bpresult[0]);
-     // data.put(servicespeedm, ssmresult[0]);
-     // data.put(servicespeedb, ssbresult[0]);
-     // data.put(bestloc, blresult[0]);
-
-     /*
-     out.println("Best pizza");
-     out.println(bestpizza);
-     out.println("Service Speed Manhattan");
-     out.println(servicespeedm);
-     out.println("Service Speed Blaze");
-     out.println(servicespeedb);
-     out.println("Best Location");
-     out.println(bestloc);
-     */
-
-     //Gson gson = new GsonBuilder().setPrettyPrinting().create();//makes the format better?
 
      out.print(new Gson().toJson(data));
-     //out.print(gson.toJson(data));
      out.flush();
      out.close();
     }
