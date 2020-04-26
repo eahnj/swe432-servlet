@@ -37,7 +37,8 @@ public class echo extends HttpServlet{
          
          if(key.equals("bestLocation")){ //input validation
             String parameter = parameterMap.get(key)[0].toLowerCase();
-            if(parameter.length() > 30){parameter = "Cannot have more than 30 characters!";}
+            if(parameter.equals("null")){parameter = "Please Select an option!";}
+            else if(parameter.length() > 15){parameter = "Cannot have more than 15 characters!";}
             else if(parameter.contains("fuck") || parameter.contains("shit") || parameter.contains("hell") || parameter.contains("damn")){
                parameter = "Cannot have bad words!";
             }
@@ -46,7 +47,7 @@ public class echo extends HttpServlet{
          }
          else{
             String parameter = parameterMap.get(key)[0];
-            if(parameter == null){parameter = "Please Select an option!";}
+            if(parameter.equals("null")){parameter = "Please Select an option!";}
             data.put(key, parameter);
          }
          //data.put(key, parameter);
